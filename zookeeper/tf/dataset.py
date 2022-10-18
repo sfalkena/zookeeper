@@ -124,6 +124,7 @@ class TFDSDataset(Dataset):
                 data_dir=self.data_dir,
                 download=self.download,
                 decoders=decoders,
+                download_and_prepare_kwargs={"download_dir": '~/datasets/'},
                 as_dataset_kwargs={"shuffle_files": shuffle},
             )
         except AssertionError as e:

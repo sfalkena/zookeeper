@@ -17,6 +17,10 @@ class Experiment:
     dataset: Dataset = ComponentField()
     preprocessing: Preprocessing = ComponentField()
     model: keras.models.Model = ComponentField()
+    experiment_name: str = Field()
+    lab_blocks: Sequence[bool] = Field()    
+    resume_from: Optional[str] = Field()
+
 
     # Parameters
     epochs: int = Field()
